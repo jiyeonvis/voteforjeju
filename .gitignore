@@ -1,0 +1,7 @@
+__pychache__
+media
+db.sqlite3
+*.log
+*.pot
+*.pyc
+settings.py

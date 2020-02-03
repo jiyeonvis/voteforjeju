@@ -1,0 +1,16 @@
+여긴 제주갑이야~
+<br>
+<br>
+{% for candidate in candi %}
+    기호 {{ candidate.number }}번<br>
+    {{ candidate.name }}<br>
+    소속 : {% if candidate.party == 'jhd' %}
+            자유한국당<br>
+            {% elif candidate.party == 'dmj' %}
+            더불어민주당<br>
+            {% elif candidate.party == 'jed' %}
+            정의당<br>
+            {% endif %}
+    {{ candidate.detail_info|linebreaks }}<br>
+    <br>
+{% endfor %}
