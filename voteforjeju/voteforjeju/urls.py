@@ -26,6 +26,7 @@ urlpatterns = [
     path('jejugab/', views.gab, name='gab'),
     path('jejueul/', views.eul, name='eul'),
     path('jejubyeong/', views.byeong, name='byeong'),
+    path('jejugab/detail/<int:pk>', views.detail_gab, name='detail_gab'),
 ]
 
 

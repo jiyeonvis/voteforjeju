@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% extends 'jeju2020/base.html' %}
+{% load static %}
+
+<html>
+    <head>
+        <title> 제주 갑 </title>
+    </head>
+    
+    <body>
+        {% block content %}
+        <div id="container">
+            <div class="region-title">
+                <p>제주 갑</p>
+            </div>
+            
+            <div class="select-candi">
+                {% for candidate in candi %}
+                <div class="opt-candi">
+                    <p>기호 {{ candidate.number }}번</p><br>
+                    <a href="{% url 'detail_gab' pk=candidate.pk %}">{{ candidate.name }}</a><br>
+                </div>
+        
+                {% endfor %}
+            </div>
+            
+            {%if one %}
+            <div class="info_candi">
+                <div class ="basic_info">
+                    {{ one.name }}<br>
+                    {{ one.detail_info|linebreaks|safe }}
+                </div>
+                <div class="main_promise">
+                    {% if promise %}
+                        {% if promise.text1 %}
+                            {{promise.text1|linebreaks}}
+                        {% endif %}
+                    {% endif %}
+                </div>
+                <div class="press">
+                    {% for article in press %}
+                        {{article.headline}}| {{article.link}}<br>
+                    {% endfor %}
+                </div>
+            </div>
+        
+        
+        
+        
+            {% else %}
+            <div class="info_default">
+                기본이야
+                안녕안녕 우리 페이지에 온 걸 환영해~
+            </div>
+            {% endif %}
+        
+            
+        </div>
+{% endblock %}
+
+
+</body>
+
+

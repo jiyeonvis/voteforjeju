@@ -1,0 +1,30 @@
+@font-face { 
+    font-family: 'MapoDPPA'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDPPA.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; }
+
+#container{
+    margin: 0px auto;
+}
+html{
+    background-color: #EAEAEA;
+}   
+.region-title p{
+    text-align: left;
+    font-size: 1rem;
+}
+.select-candi{
+    margin: 0px auto;
+    display:inline-flex;
+    flex-flow:row;
+    justify-content:center;
+}
+.select-candi p{
+    font-family:'MapoDPPA';
+    margin: 0;
+}
+
+.opt-candi{
+    margin: 1rem;
+}
