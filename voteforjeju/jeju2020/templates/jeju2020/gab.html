@@ -11,13 +11,13 @@
         {% block content %}
         <div id="container">
             <div class="region-title">
-                <p>제주 갑</p>
+                제주 갑
             </div>
             
             <div class="select-candi">
                 {% for candidate in candi %}
                 <div class="opt-candi">
-                    <p>기호 {{ candidate.number }}번</p><br>
+                    <p>{{ candidate.number }}</p>
                     <a href="{% url 'detail_gab' pk=candidate.pk %}">{{ candidate.name }}</a><br>
                 </div>
         
@@ -25,21 +25,90 @@
             </div>
             
             {%if one %}
-            <div class="info_candi">
-                <div class ="basic_info">
-                    {{ one.name }}<br>
-                    {{ one.detail_info|linebreaks|safe }}
+            <div class="info-candi">
+            <div class ="basic-info" style="background-image: linear-gradient(white, white, {{partyback}}); color:{{partyfontc}};">
+                    <div class="basic-info-up">
+
+                    <p id="candi-name" style="color:{{partynamec}}">{{one.number}} {{ one.name }}</p>
+                        
+
+                    </div>
+                    <div class="basic-info-down">
+                        <div class="basic-info-left">
+                            <img src="{{ one.profile_pic.url }}">
+                        </div>
+                        <div class="basic-info-right">
+                            <p id="candi-slogan">{{ one.slogan|safe }}</p>
+                            <p id="candi-party" style="background-color:{{partyback}}; color:{{partyfontc}}">{{party}}</p>
+                            
+                        </div>
+                        
+                    </div>
+
                 </div>
-                <div class="main_promise">
+
+
+                <div class="main-promise">
+                    <div class="start-promise">#{{one.name}} 후보자의 공약</div>
                     {% if promise %}
+                    <div class="child-promise">
                         {% if promise.text1 %}
-                            {{promise.text1|linebreaks}}
+                            {{promise.text1|safe}}
                         {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text2 %}
+                            {{promise.text2|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text3 %}
+                            {{promise.text3|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text4 %}
+                            {{promise.text4|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text5 %}
+                            {{promise.text5|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text6 %}
+                            {{promise.text6|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text7 %}
+                            {{promise.text7|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text8 %}
+                            {{promise.text8|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text9 %}
+                            {{promise.text9|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text10 %}
+                            {{promise.text10|safe}}
+                        {% endif %}
+                    </div>
                     {% endif %}
                 </div>
                 <div class="press">
                     {% for article in press %}
-                        {{article.headline}}| {{article.link}}<br>
+                    <div class="child-press">
+                        {{article.when|date:"m/d"}}|<a href="{{article.link}}">{{article.headline}}</a><br>
+                    </div>
+                        
                     {% endfor %}
                 </div>
             </div>

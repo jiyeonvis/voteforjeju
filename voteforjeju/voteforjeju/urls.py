@@ -20,6 +20,9 @@ from jeju2020 import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.conf.urls import url, include
+from markdownx import urls as markdownx
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
@@ -27,6 +30,7 @@ urlpatterns = [
     path('jejueul/', views.eul, name='eul'),
     path('jejubyeong/', views.byeong, name='byeong'),
     path('jejugab/detail/<int:pk>', views.detail_gab, name='detail_gab'),
+    url(r'^markdownx/', include(markdownx)),
 ]
 
 

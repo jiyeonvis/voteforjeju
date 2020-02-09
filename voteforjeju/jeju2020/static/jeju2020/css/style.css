@@ -3,28 +3,222 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDPPA.woff') format('woff'); 
     font-weight: normal; 
     font-style: normal; }
+@font-face { 
+    font-family: 'enjoystory'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; }
+@font-face { font-family: 'MapoPeacefull'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; }
+@font-face { font-family: 'Cafe24Ohsquare'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; }
+@font-face { 
+    font-family: 'JSDongkang-Regular'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; }
 
+@media screen and (min-width: 769px){
+    body{
+        background-color:#E7F6FE;
+    }
+}
+@media screen and (max-width: 769px){
+    body{
+        background-color:#E7F6FE;
+
+    }
+
+}
+/* base.html */
+body{
+    /*background-color: #DBECC0;*/
+    background-color: white;
+}
+
+/* home.html */
+.home-voteforjeju{
+    font-family:'enjoystory','MapoDPPA';
+    text-align:center;
+    font-size:2rem;
+}
+
+
+/* gab.html */
 #container{
     margin: 0px auto;
+    width: 95%;
 }
-html{
-    background-color: #EAEAEA;
-}   
-.region-title p{
-    text-align: left;
-    font-size: 1rem;
+ 
+.region-title{
+    text-align: left;  
+    font-size: 3rem;
+    font-family:'enjoystory','MapoDPPA' ;
+    color: #050099;
+    margin : 0 1rem;
+    background-color:
 }
-.select-candi{
+
+div.select-candi{
     margin: 0px auto;
     display:inline-flex;
-    flex-flow:row;
+    flex-flow: row ;
     justify-content:center;
-}
-.select-candi p{
-    font-family:'MapoDPPA';
-    margin: 0;
+    
+    width:100%;
+    height:5rem;
+    overflow-x:scroll ;
+    white-space: nowrap ;
 }
 
 .opt-candi{
-    margin: 1rem;
+    margin: 0.3rem 0.5rem;
+    font-family:'MapoPeacefull';
+    font-size:1.2rem;
+    text-align:center;
+
+}
+.opt-candi a{
+    font-size:1.5rem;
+}
+.opt-candi a:link{
+    color:#006400;
+    text-decoration : none;
+}
+.opt-candi a:visited{
+    color:#8bc092;
+    text-decoration:none;
+}
+.opt-candi a:hover{
+    color:yellowgreen;
+    text-decoration:none;
+}
+.opt-candi a:active{
+    color:yellow;
+    text-decoration:none;
+}
+.opt-candi p{
+    margin:0 0;
+    font-weight:bold;
+    color: #569c79;
+}
+
+
+.basic-info{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+.basic-info-up{
+    width:100%;
+}
+.basic-info-up #candi-name{
+    font-size:2.5rem;
+    margin: 1rem 0.2rem 0.2rem 0.2rem;
+    font-family: 'MapoPeacefull';
+    color: black;
+}
+.basic-info-down{
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width:100%;
+}
+.basic-info-left{
+    width:8rem;
+    height:10rem;
+    margin: 0.5rem 1rem 1.5rem 1.5rem;
+}
+.basic-info-right{
+    width: 60%;
+    position:relative;
+    font-family:'MapoPeacefull';
+}
+.basic-info-right #candi-slogan{
+    font-size:1.5rem;
+    text-align:center;
+    margin-right:1rem;
+}
+.basic-info-right #candi-party{
+    bottom: 0;
+    right:1.5rem;
+    position:absolute;
+}
+/*
+.basic-info{
+    width:100%;
+    height:14rem;
+    display:flex;
+    flex-flow:column;
+    justify-content:space-between;
+    background-color: #569c79;
+    border-radius:1rem;
+}
+.basic-info-text{
+    margin-left:1rem;
+    width: 45%;
+    height:100%;
+
+}
+
+
+.basic-info-text #candi-slogan{
+    font-size:1.5rem;
+    font-family: 'MapoPeacefull';
+    color: white;
+    margin:0;
+    text-align:center;
+}
+.basic-info-image{ 
+    width:8rem;
+    height:10rem;
+    position:absolute;
+    right:1.5rem;
+    float:right;
+    margin: 1rem 0.5rem;
+}
+
+.basic-info-image #candi-party{
+    margin: 0.4rem 0;
+    text-align:center;
+    font-size:1.2rem;
+    font-family: 'MapoPeacefull';
+    border-radius:1rem;
+}*/
+img{
+    width:100%;
+    height:100%;
+}
+/* 후보자 공약 */
+.main_promise #prom{
+    text-decoration:underline;
+}
+.main-promise{
+    margin-top:1rem;
+    padding: 1rem;
+    background-color: #dbecc0;
+    border-radius:1rem;
+}
+.start-promise{
+    font-size:2rem;
+    font-family:'MapoPeacefull';
+}
+.child-promise{
+    font-family: 'JSDongkang-Regular';
+    margin: 0.5rem 0;
+}
+#prom-name{
+    font-size:1.3rem;
+    color:green;
+}
+.child-promise p{
+    margin: 0 0.5rem 0 0.5rem;
+}
+.child-promise a:link{
+    color:black;
 }

@@ -2,6 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import Candidate, Press, Promise
+from markdownx.admin import MarkdownxModelAdmin
 
 class CandAdmin(admin.ModelAdmin):
     list_display = (
@@ -14,6 +15,7 @@ class CandAdmin(admin.ModelAdmin):
     list_display_links = (
         'name',
     )
+
 class PressAdmin(admin.ModelAdmin):
     list_display= (
         'candidate',
