@@ -2,8 +2,6 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-import markdownx.models
-
 
 class Migration(migrations.Migration):
 
@@ -22,54 +20,5 @@ class Migration(migrations.Migration):
             name='candidate',
             field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to='jeju2020.Candidate'),
         ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text1',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text10',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text11',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text3',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text4',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text5',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text6',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text7',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text8',
-            field=markdownx.models.MarkdownxField(),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text9',
-            field=markdownx.models.MarkdownxField(),
-        ),
+       
     ]
