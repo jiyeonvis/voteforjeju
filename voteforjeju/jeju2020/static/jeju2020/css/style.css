@@ -1,10 +1,8 @@
-@font-face { 
-    font-family: 'MapoDPPA'; 
+@font-face { font-family: 'MapoDPPA'; 
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDPPA.woff') format('woff'); 
     font-weight: normal; 
     font-style: normal; }
-@font-face { 
-    font-family: 'enjoystory'; 
+@font-face { font-family: 'enjoystory'; 
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff'); 
     font-weight: normal; 
     font-style: normal; }
@@ -16,16 +14,56 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff'); 
     font-weight: normal; 
     font-style: normal; }
-@font-face { 
-    font-family: 'JSDongkang-Regular'; 
+@font-face {  font-family: 'JSDongkang-Regular'; 
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff'); 
     font-weight: normal; 
     font-style: normal; }
 
+@font-face {  font-family: 'Noto Sans KR';
+        font-style: normal;font-weight: 100;
+        src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
+@font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;font-weight: 300;src:
+         url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
+@font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;font-weight: 400;
+        src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}
+@font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;font-weight: 500;
+        src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}
+@font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;font-weight: 700;
+        src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
+@font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;font-weight: 900;
+        src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
+
+
 @media screen and (min-width: 769px){
     body{
         background-color:#E7F6FE;
+        
+        margin: 0 auto;
+
     }
+
 }
 @media screen and (max-width: 769px){
     body{
@@ -40,9 +78,18 @@ body{
     background-color: white;
 }
 
+nav {
+    background-color: rgb(51, 152, 40);
+}
+.navbar-brand{
+    font-family:'Noto Sans KR';
+    text-align:center;
+    font-size:2rem;
+    color:white;
+}
 /* home.html */
 .home-voteforjeju{
-    font-family:'enjoystory','MapoDPPA';
+    font-family:'Noto Sans KR';
     text-align:center;
     font-size:2rem;
 }
@@ -56,11 +103,11 @@ body{
  
 .region-title{
     text-align: left;  
-    font-size: 3rem;
-    font-family:'enjoystory','MapoDPPA' ;
-    color: #050099;
+    font-size: 2.5rem;
+    font-weight:bold;
+    font-family:'Noto Sans KR' ;
+    color: rgb(51, 152, 40);
     margin : 0 1rem;
-    background-color:
 }
 
 div.select-candi{
@@ -77,34 +124,34 @@ div.select-candi{
 
 .opt-candi{
     margin: 0.3rem 0.5rem;
-    font-family:'MapoPeacefull';
+    font-family:'Noto Sans KR';
     font-size:1.2rem;
     text-align:center;
 
 }
 .opt-candi a{
-    font-size:1.5rem;
+    font-size:1rem;
 }
 .opt-candi a:link{
-    color:#006400;
+    color:black;
     text-decoration : none;
 }
 .opt-candi a:visited{
-    color:#8bc092;
+    color:black;
     text-decoration:none;
 }
 .opt-candi a:hover{
-    color:yellowgreen;
+    color:black;
     text-decoration:none;
 }
 .opt-candi a:active{
-    color:yellow;
+    color:black;
     text-decoration:none;
 }
 .opt-candi p{
     margin:0 0;
     font-weight:bold;
-    color: #569c79;
+    color: black;
 }
 
 
@@ -112,15 +159,40 @@ div.select-candi{
     display:flex;
     flex-direction:column;
     width:100%;
+    background-color:rgb(237, 237, 237);
+    border-radius:1rem;
+    padding-left: 0.5rem;
 }
 .basic-info-up{
     width:100%;
+    display:inline-flex;
+    flex-flow:row nowrap;
+    position:relative;
+}
+.basic-info-up #candi-num{
+    font-size:2.5rem;
+    margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    color: black;
+    
 }
 .basic-info-up #candi-name{
     font-size:2.5rem;
-    margin: 1rem 0.2rem 0.2rem 0.2rem;
-    font-family: 'MapoPeacefull';
-    color: black;
+    margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+    font-family: 'Noto Sans KR';
+    font-weight: bold;
+    color: #3e3e3e;
+    
+}
+.basic-info-up #candi-party{
+   
+    bottom: 0;
+    left: 10rem;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+    position:absolute;
+    font-family: 'Noto Sans KR';
 }
 .basic-info-down{
     display:inline-flex;
@@ -137,17 +209,16 @@ div.select-candi{
 .basic-info-right{
     width: 60%;
     position:relative;
-    font-family:'MapoPeacefull';
+    font-family:'Noto Sans KR';
 }
 .basic-info-right #candi-slogan{
     font-size:1.5rem;
     text-align:center;
-    margin-right:1rem;
+    margin: 0 1rem;
+    font-family:'Noto Sans KR';
 }
-.basic-info-right #candi-party{
-    bottom: 0;
-    right:1.5rem;
-    position:absolute;
+.basic-info-right #candi-tmi{
+    margin-left:0.5rem;
 }
 /*
 .basic-info{
@@ -195,30 +266,57 @@ img{
     height:100%;
 }
 /* 후보자 공약 */
-.main_promise #prom{
-    text-decoration:underline;
-}
+
 .main-promise{
     margin-top:1rem;
-    padding: 1rem;
-    background-color: #dbecc0;
-    border-radius:1rem;
+    background-color:white;
 }
-.start-promise{
-    font-size:2rem;
-    font-family:'MapoPeacefull';
+.start-promise, .start-press{
+    font-size:1.3rem;
+    font-family:'Noto Sans KR';
+    background-color: rgb(51, 152, 40);
+    color:white;
+    padding: 0.2rem 1rem;
+    font-weight:bold;
 }
 .child-promise{
-    font-family: 'JSDongkang-Regular';
+    font-family: 'Noto Sans KR';
     margin: 0.5rem 0;
 }
 #prom-name{
-    font-size:1.3rem;
-    color:green;
+    font-size:1.1rem;
+    font-family: 'Noto Sans KR';
+    color:black;
+    font-weight:bold;
+    margin: 0 0.5rem 0 0.5rem;
 }
 .child-promise p{
     margin: 0 0.5rem 0 0.5rem;
 }
-.child-promise a:link{
-    color:black;
+.child-promise a:link, a:visited{
+    color:rgb(51, 152, 40);
+    
+}
+
+
+.child-press{
+    font-family: 'Noto Sans KR';
+    margin: 0.5rem 0;
+    
+}
+.press-head{
+    display:inline-flex;
+    flex-flow: row;
+}
+#press-date{
+    font-weight: bold;
+    margin-left:1rem;
+    margin-right:1rem;
+}
+.child-press a:link{
+    color: rgb(51, 152, 40);
+}
+
+.press-brief{
+    margin-left:1rem;
 }

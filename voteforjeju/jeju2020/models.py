@@ -40,6 +40,20 @@ class Promise(models.Model):
 class Press(models.Model):
     candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE, default='hi')
     headline = models.CharField(max_length=200, default='기사 제목')
+    brief = models.TextField(blank=True)
     where = models.CharField(max_length=20, default='에디터')
     link = models.URLField(max_length=200, null=True)
     when = models.DateTimeField(auto_now=False, auto_now_add=False)
+
+
+class BRpromise(models.Model):
+    party = models.CharField(max_length=100)
+    #profile_pic = models.ImageField(upload_to='images/', blank=True)
+    brief = models.TextField(blank=True)
+    text1 = models.TextField(blank=True)
+    text2 = models.TextField(blank=True)
+    text3 = models.TextField(blank=True)
+    text4 = models.TextField(blank=True)
+    text5 = models.TextField(blank=True)
+    link = models.URLField(max_length=200, null=True)
+

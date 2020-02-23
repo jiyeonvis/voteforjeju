@@ -1,14 +1,146 @@
 <!DOCTYPE html>
 {% extends 'jeju2020/base.html' %}
 {% load static %}
+
 <html>
     <head>
-        <title>제주 병</title>
-
+        <title> 서귀포시 </title>
     </head>
+    
     <body>
         {% block content %}
-        <p>hello</p>
-        {% endblock %}
-    </body>
-</html>
+        <div id="container">
+            <div class="region-title">
+                서귀포시
+            </div>
+            
+            <div class="select-candi">
+                {% for candidate in candi %}
+                <div class="opt-candi">
+                    <p>{{ candidate.number }}</p>
+                    <a href="{% url 'detail_gab' pk=candidate.pk %}">{{ candidate.name }}</a><br>
+                </div>
+        
+                {% endfor %}
+            </div>
+            
+            {%if one %}
+            <div class="info-candi">
+            <div class ="basic-info">
+                    <div class="basic-info-up">
+
+                        <div id="candi-num"> 
+                            {{one.number}} </div>
+                        <div id="candi-name">
+                            {{ one.name }}
+                        </div>
+                        <div id="candi-party" style="background-color:{{partyback}}; color:{{partyfontc}}">
+                            {{party}}
+                        </div>   
+
+                    </div>
+                    <div class="basic-info-down">
+                        <div class="basic-info-left">
+                            <img src="{{ one.profile_pic.url }}">
+                        </div>
+                        <div class="basic-info-right">
+                            <p id="candi-slogan">{{ one.slogan|safe }}</p>
+                            <p id="candi-tmi">{{ one.detail_info|safe }}</p>
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+
+                <div class="main-promise">
+                    <div class="start-promise">#{{one.name}} 후보자의 공약</div>
+                    {% if promise %}
+                    <div class="child-promise">
+                        {% if promise.text1 %}
+                            {{promise.text1|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text2 %}
+                            {{promise.text2|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text3 %}
+                            {{promise.text3|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text4 %}
+                            {{promise.text4|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text5 %}
+                            {{promise.text5|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text6 %}
+                            {{promise.text6|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text7 %}
+                            {{promise.text7|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text8 %}
+                            {{promise.text8|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text9 %}
+                            {{promise.text9|safe}}
+                        {% endif %}
+                    </div>
+                    <div class="child-promise">
+                        {% if promise.text10 %}
+                            {{promise.text10|safe}}
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="press">
+                    <div class="start-press">
+                        #언론 속 {{ one.name }} 후보
+                    </div>
+                    {% for article in press %}
+                    <div class="child-press">
+                        <div class="press-head">
+                            <div id="press-date">{{article.when|date:"m월 d일"}}</div>  <a href="{{article.link}}">{{article.headline}}</a>
+                        </div>
+                
+                        {% if article.brief %}
+                        <div class="press-brief">{{ article.brief }}</div>
+                        {% endif %}
+                    </div>
+                        
+                    {% endfor %}
+                </div>
+            </div>
+        
+        
+        
+        
+            {% else %}
+            <div class="info_default">
+                후보자를 클릭하세요!(라고만 쓰면 안 돼...)
+            {% endif %}
+        
+            
+        </div>
+{% endblock %}
+
+
+</body>
+
+

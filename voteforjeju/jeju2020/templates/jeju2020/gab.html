@@ -26,11 +26,17 @@
             
             {%if one %}
             <div class="info-candi">
-            <div class ="basic-info" style="background-image: linear-gradient(white, white, {{partyback}}); color:{{partyfontc}};">
+            <div class ="basic-info">
                     <div class="basic-info-up">
 
-                    <p id="candi-name" style="color:{{partynamec}}">{{one.number}} {{ one.name }}</p>
-                        
+                        <div id="candi-num"> 
+                            {{one.number}} </div>
+                        <div id="candi-name">
+                            {{ one.name }}
+                        </div>
+                        <div id="candi-party" style="background-color:{{partyback}}; color:{{partyfontc}}">
+                            {{party}}
+                        </div>   
 
                     </div>
                     <div class="basic-info-down">
@@ -39,7 +45,7 @@
                         </div>
                         <div class="basic-info-right">
                             <p id="candi-slogan">{{ one.slogan|safe }}</p>
-                            <p id="candi-party" style="background-color:{{partyback}}; color:{{partyfontc}}">{{party}}</p>
+                            <p id="candi-tmi">{{ one.detail_info|safe }}</p>
                             
                         </div>
                         
@@ -104,9 +110,18 @@
                     {% endif %}
                 </div>
                 <div class="press">
+                    <div class="start-press">
+                        #언론 속 {{ one.name }} 후보
+                    </div>
                     {% for article in press %}
                     <div class="child-press">
-                        {{article.when|date:"m/d"}}|<a href="{{article.link}}">{{article.headline}}</a><br>
+                        <div class="press-head">
+                            <div id="press-date">{{article.when|date:"m월 d일"}}</div>  <a href="{{article.link}}">{{article.headline}}</a>
+                        </div>
+                
+                        {% if article.brief %}
+                        <div class="press-brief">{{ article.brief }}</div>
+                        {% endif %}
                     </div>
                         
                     {% endfor %}
@@ -118,9 +133,7 @@
         
             {% else %}
             <div class="info_default">
-                기본이야
-                안녕안녕 우리 페이지에 온 걸 환영해~
-            </div>
+                후보자를 클릭하세요!(라고만 쓰면 안 돼...)
             {% endif %}
         
             

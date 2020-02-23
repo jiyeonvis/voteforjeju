@@ -28,9 +28,12 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('jejugab/', views.gab, name='gab'),
     path('jejueul/', views.eul, name='eul'),
-    path('jejubyeong/', views.byeong, name='byeong'),
+    path('seoguipo/', views.byeong, name='byeong'),
     path('jejugab/detail/<int:pk>', views.detail_gab, name='detail_gab'),
+    path('jejueul/detail/<int:pk>', views.detail_eul, name='detail_eul'),
+    path('seoguipo/detail/<int:pk>', views.detail_gab, name='detail_byeong'),
     url(r'^markdownx/', include(markdownx)),
+    path('birye/', views.birye, name='birye'),
 ]
 
 

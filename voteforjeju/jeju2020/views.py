@@ -38,3 +38,23 @@ def detail_gab(request, pk):
     press = Press.objects.filter(candidate=one_candi)
     promise = Promise.objects.get(candidate=one_candi)
     return render(request, 'jeju2020/gab.html', {'candi':candidates, 'one':one_candi, 'press':press, 'promise':promise, 'party':party, 'partyback':partyback, 'partynamec':partynamec, 'partyfontc':partyfontc})
+
+def detail_eul(request, pk):
+    candidates = Candidate.objects.filter(region__iexact='gab')
+    one_candi = get_object_or_404(Candidate, pk=pk)
+    party, partyback, partynamec, partyfontc = candi(one_candi)
+    press = Press.objects.filter(candidate=one_candi)
+    promise = Promise.objects.get(candidate=one_candi)
+    return render(request, 'jeju2020/gab.html', {'candi':candidates, 'one':one_candi, 'press':press, 'promise':promise, 'party':party, 'partyback':partyback, 'partynamec':partynamec, 'partyfontc':partyfontc})
+
+def detail_byeong(request, pk):
+    candidates = Candidate.objects.filter(region__iexact='gab')
+    one_candi = get_object_or_404(Candidate, pk=pk)
+    party, partyback, partynamec, partyfontc = candi(one_candi)
+    press = Press.objects.filter(candidate=one_candi)
+    promise = Promise.objects.get(candidate=one_candi)
+    return render(request, 'jeju2020/gab.html', {'candi':candidates, 'one':one_candi, 'press':press, 'promise':promise, 'party':party, 'partyback':partyback, 'partynamec':partynamec, 'partyfontc':partyfontc})
+
+
+def birye(request):
+    return render(request, 'jeju2020/birye.html')
