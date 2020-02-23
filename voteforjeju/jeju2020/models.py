@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-from markdownx.models import MarkdownxField
 
 # Create your models here.
 class Candidate(models.Model):
