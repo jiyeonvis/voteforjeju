@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jeju2020',
-    'markdownx',
+  
 ]
 
 MIDDLEWARE = [
