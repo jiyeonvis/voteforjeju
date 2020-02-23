@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-import markdownx.models
+
 
 
 class Migration(migrations.Migration):
@@ -21,10 +21,5 @@ class Migration(migrations.Migration):
             model_name='promise',
             name='candidate',
             field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to='jeju2020.Candidate'),
-        ),
-        migrations.AlterField(
-            model_name='promise',
-            name='text2',
-            field=markdownx.models.MarkdownxField(),
         ),
     ]
