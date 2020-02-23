@@ -2,7 +2,6 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import Candidate, Press, Promise, BRpromise
-from markdownx.admin import MarkdownxModelAdmin
 
 class CandAdmin(admin.ModelAdmin):
     list_display = (
