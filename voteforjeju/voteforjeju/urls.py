@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.conf.urls import url, include
-from markdownx import urls as markdownx
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +32,6 @@ urlpatterns = [
     path('jejugab/detail/<int:pk>', views.detail_gab, name='detail_gab'),
     path('jejueul/detail/<int:pk>', views.detail_eul, name='detail_eul'),
     path('seoguipo/detail/<int:pk>', views.detail_gab, name='detail_byeong'),
-    url(r'^markdownx/', include(markdownx)),
     path('birye/', views.birye, name='birye'),
 ]
 
